@@ -101,15 +101,32 @@ section{
     align-items: center; /* Align items vertically in the center */
 }
 
+.header .navbar {
+    display: flex;
+    align-items: center;
+}
+
 .header .navbar a {
     font-size: 1.7rem;
     margin: 0 1rem;
     color: var(--black);
-    text-decoration: none; /* Remove default underline from links */
+    text-decoration: none;
 }
 
 .header .navbar a:hover {
     color: var(--orange);
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media screen and (max-width: 768px) {
+    .header .navbar {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start of the container */
+    }
+
+    .header .navbar a {
+        margin: 0.5rem 0; /* Add some spacing between the stacked links */
+    }
 }
 
 .header .icons div{
